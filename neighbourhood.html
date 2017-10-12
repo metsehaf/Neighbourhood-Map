@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Neighbourhood Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/neighbourhood.css" rel="stylesheet">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+  	<div class="container">
+  		<div class="options-box">
+  			<h1>Search here</h1>
+  			<div>
+              <input id="zoom-to-area-text" type="text" placeholder="Search for Restaurants">
+        </div>
+      </div>
+    <div id="map"></div>
+
+    <script src="C:\Users\girum\Desktop\Udacity\UdacityMapCourse\Neighbourhood\js\neighbourhood.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6OLSkDZ9C6Sjl8W4wy2wulezebTyKi-E&callback=initMap" async defer></script>
+  </body>
+</html>
