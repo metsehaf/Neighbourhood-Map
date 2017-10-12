@@ -18,7 +18,7 @@ html,
       }
 
 input {
-        font-size: 12px;
+        font-size: 22px;
       }
 
 .options-box {
@@ -30,5 +30,10 @@ input {
         padding: 10px 10px 30px 10px;
         text-align: left;
         width: 340px;
+      }
+
+#zoom-to-area-text {
+        position: relative;
+        width: 70%;
       }
     
