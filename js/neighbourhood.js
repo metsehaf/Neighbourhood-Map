@@ -6,6 +6,7 @@ var markers = [];
           center: {lat: 43.7, lng: -79.4},
           zoom: 8
         });
+
         var locations = [
         {title: "Pancer's Original Deli", location: {lat:43.740807, lng:-79.435246}},
         {title: 'La Bella Managua', location: {lat: 43.662247, lng:-79.424958 }},
@@ -37,6 +38,11 @@ var markers = [];
             populateInfoWindow(this, largeInfowindow)
           });
         }
+         //This autocomplete is for use in the geocoder entry box.
+        var zoomAutocomplete = new google.maps.places.Autocomplete(
+          document.getElementById('zoom-to-area-text'));
+        //Bias the boundaries within the map for the zoom to area text. 
+        zoomAutocomplete.bindTo('bounds', map);
 
         document.getElementById('zoom-to-area').addEventListener('click', function() {
           zoomToArea();
