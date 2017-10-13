@@ -36,4 +36,14 @@ input {
         position: relative;
         width: 70%;
       }
-    
+
+#zoom-to-area {
+        width: 24%;
+      }
+
+h1 {
+        color: #525454;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
