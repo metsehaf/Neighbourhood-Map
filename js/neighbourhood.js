@@ -61,11 +61,13 @@ var markers = [];
           infowindow.addListener('closeclick', function() {
             infowindow.marker = null;
           });
-          var streetViewService = new google.maps.StreetViewService();
-          var radius = 50;
+          
           // In case the status is OK, which means the pano was found, compute the
           // position of the streetview image, then calculate the heading, then get a
           // panorama from that and set the options
+          
+          var streetViewService = new google.maps.StreetViewService();
+          var radius = 50;
           function getStreetView(data, status) {
             if (status == google.maps.StreetViewStatus.OK) {
               var nearStreetViewLocation = data.location.latLng;
