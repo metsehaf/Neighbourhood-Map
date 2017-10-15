@@ -1,10 +1,36 @@
 <!DOCTYPE html>
+
+<!--
+ * Project 5 : Neighborhood Map Project
+ * Full Stack Web Developer
+ * 10/14/2017
+ * Author - Girum Hagos
+-->
+
 <html lang="en-US">
   <head>
-    <title>Neighbourhood Map</title>
+    
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- This tells the browser how to read the document. -->
+    
+    <!-- Internet Explorer compatible -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Tells the browser what the title of this page should be. -->
+    <title> Neighborhood map project </title>
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Load the page styles. -->
+    <!-- Include Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/neighbourhood.css" rel="stylesheet">
+    <script type='text/javascript' src='knockout-3.4.2.js'></script>
+    <script src="js/neighbourhood.js"></script>
    
   </head>
 
@@ -20,7 +46,7 @@
       </div>
     <div id="map"></div>
 
-    <script src="js/neighbourhood.js"></script>
+    
     <script async defer
         src=
         "https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyD6OLSkDZ9C6Sjl8W4wy2wulezebTyKi-E&v=3&callback=initMap"></script>
