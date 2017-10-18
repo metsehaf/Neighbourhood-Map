@@ -29,22 +29,39 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/neighbourhood.css" rel="stylesheet">
-    <script type='text/javascript' src='knockout-3.4.2.js'></script>
+    <script type='text/javascript' src='js/libs/knockout-3.4.2.js'></script>
     <script src="js/neighbourhood.js"></script>
    
   </head>
 
   <body>
-  	<div class="container">
-  		<div class="options-box">
-  			<h1>Restaurant locations</h1>
-  			<div>
+  	<div class="row">
+      <h2 id="maintitle">My Neighborhood Map : Toronto, CANADA</h2>
+      <div class="col-md-12" id = "container">
+          <div class="input-group col-md-12" id="custom-search-input">
+            <input type="text" class="  search-query form-control" 
+              placeholder="Search"
+              data-bind="textInput: query, 
+              event: {keyup: search}" autocomplete="on" />
+          </div>
+  			<!--<div>
               <input id="zoom-to-area-text" type="text" placeholder="Search for Restaurants">
               <input id="zoom-to-area" type="button" value="Zoom">
-        </div>
+        </div> 
         </div>
       </div>
-    <div id="map"></div>
+    <div id="map"></div> -->
+    <div class="col-md-12" id = "bodycontainer">
+            <div class="list-group"  id="searchlist">
+              <div data-bind = "foreach: defaultKoList" class="list-group">
+                <a href="#" class="list-group-item" data-bind = "text: name, click: $parent.listClickAction"></a>
+
+              </div>
+            </div>
+            <div class="map col-md-8" id="map" ></div>
+          </div>
+        </div>
+  </div>
 
     
     <script async defer
