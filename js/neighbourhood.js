@@ -96,10 +96,7 @@ var infowindows = [];
 
 var Client_id = "K0MACLRGBFZ0W1PJHT503EWFRU1APKMXPBWBPG5GQWJ1HJPI";
 var Client_secret = "CRHF4PIIHO5IWW1AWLZOMS1EYMET1GP04GSUBYLJJSCMCVFZ";
-var foursquareUrlFirst = 'https://api.foursquare.com/v2/venues/search?categoryId=4d4b7105d754a06374d81259&ll=43.653226,-79.383184&limit=15&radius=600'
-      + '&client_id='
-      + Client_id + '&client_secret='
-      + Client_secret + '&v=20151207';
+var foursquareUrlFirst = 'https://api.foursquare.com/v2/venues/search?categoryId=4d4b7105d754a06374d81259&ll=43.653226,-79.383184&limit=15&radius=600'+ '&client_id='+ Client_id + '&client_secret='+ Client_secret + '&v=20151207';
 
 
 //-------------------------------------------------------------
@@ -270,7 +267,7 @@ var ViewModel  = function() {
           setTimeout(function(){ infowindow.close(); }, 3500);
         }
 
-    }
+     }
   };
 };
 
