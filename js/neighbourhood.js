@@ -319,11 +319,11 @@ function createInfowindows(listArr) {
       };
     })(marker, i));
   }
-}
+  }
 
 
 //---------------------------------------------------------------------
-// animare markers
+// animate markers
 //---------------------------------------------------------------------
 
 function toggleBounce(marker) {

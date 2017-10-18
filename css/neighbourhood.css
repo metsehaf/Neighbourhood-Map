@@ -48,6 +48,11 @@ h2 {
   color:#0099CC;
 }
 
+#pano {
+        width: 200px;
+        height: 200px;
+      }
+
 /*html,
       body {
         font-family: Arial, sans-serif;
