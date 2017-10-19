@@ -264,10 +264,10 @@ var ViewModel  = function() {
             content: contentInfoArr[i]
           });
           infowindow.open(map, markers[i]);
-          setTimeout(function(){ infowindow.close(); }, 3500);
+          setTimeout(3500);
         }
-
      }
+
   };
 };
 
@@ -306,14 +306,14 @@ function createInfowindows(listArr) {
  for (i = 0; i < listArr.length; i++) {
   var marker = markers[i];
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
-    return function() {
+     return function() {
     
         toggleBounce(marker);
         infowindow.setContent(contentInfoArr[i]);
         infowindows.push(infowindow);
         infowindow.open(map, marker);
         setTimeout(function(){ infowindow.close(); }, 3500);
-      };
+       };
     })(marker, i));
   }
   }
