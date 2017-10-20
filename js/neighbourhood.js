@@ -306,19 +306,22 @@ function createInfowindows(listArr) {
  for (i = 0; i < listArr.length; i++) {
   var marker = markers[i];
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
-     return function() {
+    return function() {
     
         toggleBounce(marker);
         infowindow.setContent(contentInfoArr[i]);
         infowindows.push(infowindow);
         infowindow.open(map, marker);
-        setTimeout(function(){ infowindow.close(); }, 3500);
-       };
+        closeLater(map,marker);
+      };
     })(marker, i));
   }
-  }
-
-
+}
+function closeLater(){
+  setTimeout(function(){
+    infowindow.close(); 
+ }, 3500);
+}
 //---------------------------------------------------------------------
 // animate markers
 //---------------------------------------------------------------------
