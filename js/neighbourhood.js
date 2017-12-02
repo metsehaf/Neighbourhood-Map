@@ -251,7 +251,7 @@ var ViewModel  = function() {
   // Action for selecting place from the list : 
   // opens the infowindow and marker bounces of the clicked place 
   //---------------------------------------------------------------------
-  
+
    self.listClickAction = function(data) {
       
       var itemAt = data.name;
@@ -264,8 +264,14 @@ var ViewModel  = function() {
             content: contentInfoArr[i]
           });
           infowindow.open(map, markers[i]);
-          setTimeout(3500);
+          setTimeout(function(){
+           infowindow.close(); 
+           }, 1000);
+          // setTimeout(1000);
+          // infowindow.close(map, markers[i]);
+          // setTimeout(1000);
         }
+
      }
 
   };
@@ -320,7 +326,7 @@ function createInfowindows(listArr) {
 function closeLater(){
   setTimeout(function(){
     infowindow.close(); 
- }, 3500);
+ }, 1000);
 }
 //---------------------------------------------------------------------
 // animate markers
